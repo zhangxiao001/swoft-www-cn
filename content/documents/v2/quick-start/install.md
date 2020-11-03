@@ -89,3 +89,16 @@ php swoftcli.phar create:app --type tcp Swoft-TCP
 
 
 [^WSL]:通过 Windows 10 安装 WSL 后可以使用大部分 Linux 功能，推荐安装 Ubuntu LTS 作为子系统。
+
+
+### 常见问题：
+********
+Unzip with unzip command failed, falling back to ZipArchive class
+[RuntimeException]
+  Could not scan for classes inside "*/swoft/vendor/symfony/polyfill-php80/Resources/
+  stubs" which does not appear to be a file nor a folder
+
+更换一下Composer 镜像地址：
+切换到阿里云镜像：
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+然后安装成功
